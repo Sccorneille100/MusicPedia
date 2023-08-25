@@ -1,0 +1,18 @@
+DROP DATABASE IF EXISTS music_db;
+CREATE DATABASE music_db;
+
+USE music_db;
+
+CREATE TABLE music (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  music_name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE reviews (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    music_id INT,
+    review TEXT NOT NULL,
+    FOREIGN KEY (music_id)
+    REFERENCES music(id)
+    ON DELETE SET NULL
+);
