@@ -2,10 +2,12 @@ const express = require('express');
 const axios = require('axios');
 const bodyParser = require('body-parser');
 const config = require('./config/config'); // Import your Last.fm API key
+const bcrypt = require('bcrypt');
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -13,8 +15,7 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
     // You can send a response here, such as rendering an HTML page.
     res.send('<h1>Welcome to the Artist Search App</h1>');
-  });
-  
+});
 
 // Last.fm API key
 const lastFMAPIKey = config.lastFMAPIKey;
@@ -57,14 +58,6 @@ app.get('/search', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-=======
-const app = express();
-const bcrypt = require('bcrypt');
-
-app.use(express.json());
-
 // Put this into a database
 const users = [];
 
@@ -84,7 +77,7 @@ app.post('/users', async (req, res) => {
 });
 
 app.post('/users/login', async (req, res) => {
-    const user = users.find(user => user.name = req.body.name)
+    const user = users.find(user => user.name === req.body.name)
     if (user == null) {
         return res.status(400).send('Cannot find user')
     }
@@ -99,6 +92,6 @@ app.post('/users/login', async (req, res) => {
     }
 })
 
-app.listen(3000, () => {
-    console.log('Server is listening on port 3000');
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
