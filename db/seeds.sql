@@ -1,4 +1,4 @@
-INSERT INTO music (music_name)
+INSERT INTO React (react_name)
 VALUES ("Super Cat Don Dada"),
        ("Clipse Hell Hath No Fury"),
        ("Kelis Tasty"),

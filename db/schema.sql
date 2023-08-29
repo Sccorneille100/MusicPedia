@@ -1,14 +1,14 @@
-DROP DATABASE IF EXISTS music_db;
-CREATE DATABASE music_db;
+DROP DATABASE IF EXISTS react_db;
+CREATE DATABASE react_db;
 
-USE music_db;
+USE react_db;
 
-CREATE TABLE music (
+CREATE TABLE reactDOM (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   music_name VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE reviews (
+CREATE TABLE reactDOM (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     music_id INT,
     review TEXT NOT NULL,
