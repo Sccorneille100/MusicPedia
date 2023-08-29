@@ -1,15 +1,29 @@
 const express = require('express');
+const path = require('path');
 const axios = require('axios');
 const bodyParser = require('body-parser');
 const config = require('./config/config'); // Import your Last.fm API key
 const bcrypt = require('bcrypt');
+const cors = require('cors');
+const { errorHandler } = require('./middleware/errorMiddleware');
+const jwt = require('jsonwebtoken')
+const secretKey = (process.env.JWT_SECRET);
+const routes = require('./routes');
+
 
 const app = express();
 const port = process.env.PORT || 3001;
 
+app.use(express.static(path.join(__dirname, 'client/build')))
+
+app.use(cors());
+
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+app.use('/api/users', require('./routes/api/userRoutes.js'))
 
 // Define a route handler for the root URL
 app.get('/', (req, res) => {
@@ -19,6 +33,9 @@ app.get('/', (req, res) => {
 
 // Last.fm API key
 const lastFMAPIKey = config.lastFMAPIKey;
+
+
+app.use(routes);
 
 // Search route
 app.get('/search', async (req, res) => {
@@ -58,39 +75,45 @@ app.get('/search', async (req, res) => {
   }
 });
 
+//IMPORTANT COREY! FIGURE OUT HOW TO HAVE AN ACTUAL REGISTRATION PAGE SHOW UP. WILL PROBABLY HAVE TO MAKE THE HTML AND CSS FOR IT. START BASIC WITH JUST MVP FOR REGISTERING AND THEN MAKE A LOGIN PAGE. BEFORE WORKING ON THIS AGAIN RERUN THE WHOLE THING TO REFRESH MEMORY!!!!
+app.get('/register', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/src/pages', 'Register.jsx'));
+});
+
+
 // Put this into a database
 const users = [];
 
-app.get('/users', (req, res) => {
-    res.json(users);
-});
+ app.get('/users', (req, res) => {
+     res.json(users);
+ });
 
-app.post('/users', async (req, res) => {
-    try {
-        const hashedPassword = await bcrypt.hash(req.body.password, 10);
-        const user = { name: req.body.name, password: hashedPassword };
-        users.push(user);
-        res.status(201).send();
-    } catch {
-        res.status(500).send()
-    }
-});
+ app.post('/users', async (req, res) => {
+     try {
+         const hashedPassword = await bcrypt.hash(req.body.password, 10);
+         const user = { name: req.body.name, password: hashedPassword };
+         users.push(user);
+         res.status(201).send();
+     } catch {
+         res.status(500).send()
+     }
+ });
 
-app.post('/users/login', async (req, res) => {
-    const user = users.find(user => user.name === req.body.name)
-    if (user == null) {
-        return res.status(400).send('Cannot find user')
-    }
-    try {
-       if (await bcrypt.compare(req.body.password, user.password)) {
-        res.send('Success')
-       } else {
-        res.send('Not Allowed')
-       }
-    } catch {
-        res.status(500).send()
-    }
-})
+ app.post('/users/login', async (req, res) => {
+     const user = users.find(user => user.name === req.body.name)
+     if (user == null) {
+         return res.status(400).send('Cannot find user')
+     }
+     try {
+        if (await bcrypt.compare(req.body.password, user.password)) {
+         res.send('Success')
+        } else {
+         res.send('Not Allowed')
+        }
+     } catch {
+         res.status(500).send()
+     }
+ })
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
