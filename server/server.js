@@ -11,6 +11,9 @@ const secretKey = (process.env.JWT_SECRET);
 const routes = require('./routes');
 
 
+// Import Route Handlers
+const { artistRoutes } = require('./controllers');
+
 const app = express();
 const port = process.env.PORT || 3001;
 
@@ -30,6 +33,7 @@ app.get('/', (req, res) => {
     // You can send a response here, such as rendering an HTML page.
     res.send('<h1>Welcome to the Artist Search App</h1>');
 });
+
 
 // Last.fm API key
 const lastFMAPIKey = config.lastFMAPIKey;
@@ -75,9 +79,25 @@ app.get('/search', async (req, res) => {
   }
 });
 
-//IMPORTANT COREY! FIGURE OUT HOW TO HAVE AN ACTUAL REGISTRATION PAGE SHOW UP. WILL PROBABLY HAVE TO MAKE THE HTML AND CSS FOR IT. START BASIC WITH JUST MVP FOR REGISTERING AND THEN MAKE A LOGIN PAGE. BEFORE WORKING ON THIS AGAIN RERUN THE WHOLE THING TO REFRESH MEMORY!!!!
+// app.use('/album', albumRoutes);
+app.use('/artists', artistRoutes);
+// app.use('/songs', songRoutes);
+
+
 app.get('/register', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/src/pages', 'Register.jsx'));
+});
+
+
+app.post('/users', async (req, res) => {
+    try {
+        const hashedPassword = await bcrypt.hash(req.body.password, 10);
+        const user = { name: req.body.name, password: hashedPassword };
+        users.push(user);
+        res.status(201).send();
+    } catch {
+        res.status(500).send();
+    }
 });
 
 
@@ -116,5 +136,5 @@ const users = [];
  })
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+    console.log(`Server is running on port ${port}`);
 });
