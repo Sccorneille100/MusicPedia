@@ -36,12 +36,12 @@ router.get('/search', async (req, res) => {
       const artistNames = searchResults.map((result) => ({
         name: result.name,
         type: 'artist', 
-        /* Parameter information based on Last.fm API documentation
+        //Parameter information based on Last.fm API documentation
         mbid: result.mbid,
         url: result.url,    
         image_small: result.image_small,
         image: result.image,
-        streamable: result.streamable,*/
+        streamable: result.streamable,
       }));
   
       // Respond with artist names
