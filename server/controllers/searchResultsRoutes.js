@@ -2,6 +2,9 @@ const express = require('express');
 const axios = require('axios');
 const router = express.Router();
 
+// Import the Artist model
+const Artist = require('../models/artist');
+ 
 // Import Last.fm API key
 const config = require('../config/config');
 
@@ -32,20 +35,25 @@ router.get('/search', async (req, res) => {
         return res.status(404).json({ message: 'No results found.' });
       }
   
-      // Create an array of search results with type information
-      const artistNames = searchResults.map((result) => ({
-        name: result.name,
+      // Extract the first search result (assuming it's the most relevant)
+      const firstResult = searchResults[0];
+
+      // Create a new artist instance and save it to MongoDB
+      const newArtist = new Artist({
+        name: firstResult.name,
+        /*
         type: 'artist', 
-        //Parameter information based on Last.fm API documentation
-        mbid: result.mbid,
-        url: result.url,    
-        image_small: result.image_small,
-        image: result.image,
-        streamable: result.streamable,
-      }));
-  
-      // Respond with artist names
-      res.json(artistNames);
+        mbid: firstResult.mbid,
+        url: firstResult.url,    
+        image_small: firstResult.image_small,
+        image: firstResult.image,
+        streamable: firstResult.streamable,*/
+      });
+
+      await newArtist.save();
+
+      // Respond with the saved artist
+      res.json(newArtist);
     } catch (error) {
       console.error('Last.fm API Error:', error);
       return res.status(500).json({ message: 'Error fetching Last.fm data.' });

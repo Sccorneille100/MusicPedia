@@ -19,13 +19,15 @@ function App() {
         return;
     }
 
+    let data; 
+
     try {
         const response = await fetch(`/artists/search?q=${encodeURIComponent(searchTerm)}`);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
 
-        const data = await response.json();
+        data = await response.json(); 
 
         // Log the Last.fm API response
         console.log('Last.fm Artist Search Response:', data);
@@ -35,6 +37,21 @@ function App() {
         console.error('Error fetching data:', error);
         alert('An error occurred while fetching data.');
     }
+
+    try {
+        const saveResponse = await fetch('/search-results/save', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ results: data }), 
+        });
+        if (!saveResponse.ok) {
+          throw new Error('Error saving search results');
+        }
+      } catch (error) {
+        console.error('Error saving search results:', error);
+      }
 };
 
   return (

@@ -12,7 +12,7 @@ const routes = require('./routes');
 
 
 // Import Route Handlers
-const { artistRoutes } = require('./controllers');
+const { artistRoutes, searchRoutes } = require('./controllers');
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -81,6 +81,7 @@ app.get('/search', async (req, res) => {
 
 // app.use('/album', albumRoutes);
 app.use('/artists', artistRoutes);
+app.use('/search-results', searchRoutes);
 // app.use('/songs', songRoutes);
 
 
