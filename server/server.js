@@ -5,7 +5,7 @@ const config = require('./config/config'); // Import your Last.fm API key
 const bcrypt = require('bcrypt');
 
 // Import Route Handlers
-const { artistRoutes } = require('./controllers');
+const { artistRoutes, searchRoutes } = require('./controllers');
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -22,6 +22,7 @@ app.get('/', (req, res) => {
 
 // app.use('/album', albumRoutes);
 app.use('/artists', artistRoutes);
+app.use('/search-results', searchRoutes);
 // app.use('/songs', songRoutes);
 
 // Put this into a database
