@@ -1,0 +1,534 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #d4f1f4;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ant-select-arrow {
+  color: inherit !important;
+}
+
+.ant-card-body {
+  padding: 16px !important;
+}
+
+-nested-loading {
+  height: 70vh;
+  overflow-y: auto;
+  width: 100%;
+  overflow-x: clip;
+}
+
+.playlist-header {
+  padding-left: 0;
+}
+
+.playlist-header .ant-page-header-heading-left {
+  align-items: flex-end;
+}
+
+.scrollable-playlists .ant-spin-nested-loading {
+  height: 70vh;
+  overflow-y: auto;
+  width: 100%;
+  overflow-x: clip;
+  padding-right: 40px;
+}
+
+.scrollable-tracks .ant-spin-nested-loading {
+  height: 70vh;
+  overflow-y: auto;
+  width: 100%;
+  overflow-x: clip;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+:hover ::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 1px 1px 0px rgb(0 0 0 / 10%),
+    inset 0px -1px 0px rgb(0 0 0 / 7%);
+}
+
+.text-gray {
+  color: grey;
+}
+
+.ant-pagination-options {
+  display: none;
+}
+
+.ant-layout-header {
+  padding: 0;
+}
+
+.ant-list-item-action > li {
+  margin-right: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-list-item-action > li:first-child {
+  width: 30px;
+}
+
+.ant-list-item-action > li:last-child {
+  width: 130px;
+}
+
+/* Reference from: https://www.codingflicks.com/2021/06/responsive-navbar-with-search-box.html */
+/* Navbar Start */
+
+.navmenu {
+  width: 100%;
+  background: #303030;
+  display: inline-block;
+  position: relative;
+  z-index: 20;
+}
+
+#menu {
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+  top: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  padding-left: 10px;
+  line-height: 2.2em;
+}
+
+#menu a {
+  text-decoration: none;
+}
+
+nav {
+  display: none;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 0;
+  background-color: #303030;
+}
+
+nav li {
+  display: block;
+  font-size: 16px;
+  color: white;
+}
+
+ul.navbar {
+  height: 64px;
+}
+
+ul.navbar li {
+  height: 64px;
+}
+
+ul.navbar li div {
+  align-items: center;
+  display: inline-flex;
+  height: 100%;
+}
+
+@media (max-width: 720.99px) {
+  ul.navbar li div {
+    display: block;
+  }
+}
+
+ul.navbar > li > a {
+  height: 64px;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+}
+
+ul.navbar > li > a:hover {
+  color: red;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/*==Dropdown Menu==*/
+.sub-menu li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+ul.navbar li ul.sub-menu {
+  display: none;
+  position: absolute;
+}
+
+ul.navbar li {
+  position: relative;
+}
+
+ul.navbar li:hover ul.sub-menu {
+  display: block;
+}
+
+.sub-menu li {
+  margin-left: 0 !important;
+}
+
+ul.sub-menu > li > a {
+  color: #fff;
+}
+
+ul.sub-menu > li > a:hover {
+  color: red;
+}
+
+@media screen and (max-width: 720px) {
+  nav ul {
+    width: 100% !important;
+  }
+
+  #sub-menu {
+    display: none;
+  }
+
+  nav a {
+    padding: 5px 10px;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  #menu {
+    display: none;
+  }
+
+  nav {
+    display: block !important;
+  }
+
+  nav li {
+    display: inline-block;
+  }
+}
+
+/*----- Search -----*/
+#search-form {
+  padding-top: 4px;
+  padding-right: 5px;
+  float: right;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+#search-form input {
+  width: 200px;
+  height: 30px;
+  padding: 0 8px;
+  float: left;
+  border-radius: 2px 0 0 2px;
+  font-size: 13px;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+}
+
+#search-form button {
+  width: auto !important;
+  height: 30px;
+  padding: 0 8px;
+  float: right;
+  border-radius: 0 2px 2px 0;
+  background: #66a992;
+  font-size: 13px;
+  font-weight: 600;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.content-wrapper {
+  background-color: #303030;
+  z-index: 20;
+  position: relative;
+}
+
+@media screen and (max-width: 480px) {
+  .toggle-nav {
+    padding: 6px 10px;
+  }
+  #search-form input {
+    width: 150px;
+  }
+}
+
+.navmenu {
+  padding: 0 100px !important;
+  height: 74px;
+}
+
+@media (max-width: 1199.99px) {
+  .navmenu {
+    padding: 0 55px !important;
+  }
+}
+
+@media (max-width: 999.99px) {
+  .navmenu {
+    padding: 0 20px !important;
+  }
+}
+
+/* Navbar End */
+
+/* Playlist Id page Start */
+
+.track-title-col {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.playlist-cover {
+  width: 250px;
+  height: 250px;
+}
+
+.playlist-cover img {
+  object-fit: contain;
+}
+
+.playlist-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 42px;
+  padding: 28px 0;
+}
+
+.tracks-list {
+  display: none;
+}
+
+.playlist-container {
+  padding: 0 150px;
+}
+
+.ant-list-item-action-split {
+  display: none;
+}
+
+@media (max-width: 1585.99px) {
+  .track-title-col {
+    font-size: 14px;
+  }
+
+  .playlist-cover {
+    width: 200px;
+    height: 200px;
+  }
+
+  .playlist-title {
+    font-size: 38px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 1225.99px) {
+  .tracks-table {
+    display: none;
+  }
+
+  .tracks-list {
+    display: block;
+  }
+}
+
+@media (max-width: 1209.99px) {
+  .playlist-cover {
+    width: 150px;
+    height: 150px;
+  }
+
+  .playlist-title {
+    font-size: 25px;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 897.99px) {
+  .playlist-container {
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 659.99px) {
+  .playlist-cover {
+    width: 120px;
+    height: 120px;
+  }
+
+  .playlist-title {
+    font-size: 20px;
+    padding: 5px 0;
+  }
+
+  .ant-list-item-action > li {
+    margin-right: 0;
+  }
+
+  .ant-list-item-action > li:first-child {
+    margin-right: 10px;
+  }
+
+  .ant-page-header-heading-left {
+    align-items: center !important;
+  }
+}
+
+.spotify-link-icon-only {
+  display: none;
+}
+
+.ant-list-item-meta-avatar .ant-avatar-image {
+  height: 50px;
+  width: 50px;
+}
+
+@media (max-width: 599.99px) {
+  .spotify-link-full {
+    display: none;
+  }
+
+  .spotify-link-icon-only {
+    display: block;
+  }
+}
+
+@media (max-width: 574.99px) {
+  .scrollable-playlists .ant-spin-nested-loading {
+    padding-left: 15%;
+    padding-right: 25%;
+  }
+
+  .scrollable-playlists .ant-page-header-heading-title {
+    font-size: 14px;
+  }
+
+  .scrollable-playlists .ant-page-header {
+    padding: 0;
+  }
+}
+
+.track-uploaded-at-short {
+  display: none;
+}
+
+@media (max-width: 523.99px) {
+  .playlist-cover {
+    width: 90px;
+    height: 90px;
+  }
+
+  .playlist-title {
+    font-size: 18px;
+    padding: 0;
+  }
+
+  .ant-list-item-meta-avatar .ant-avatar-image {
+    height: 30px;
+    width: 30px;
+  }
+
+  .tracks-text {
+    font-size: 12px;
+  }
+
+  .tracks-list .ant-list-item-meta {
+    align-items: center;
+  }
+
+  .tracks-list .ant-list-item-action li:last-child {
+    width: 70px;
+  }
+
+  .spotify-link-icon-only {
+  }
+
+  .spotify-link-icon-only button {
+    margin-left: 20px !important;
+    height: 32px !important;
+    width: 32px !important;
+    lign-items: center;
+    display: flex;
+  }
+
+  .spotify-link-icon-only img {
+    height: 24px !important;
+  }
+
+  .track-uploaded-at-short {
+    display: block;
+    font-size: 12px;
+  }
+
+  .track-uploaded-at-long {
+    display: none;
+  }
+
+  .text-gray {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 420.99px) {
+  .playlist-cover {
+    width: 75px;
+    height: 75px;
+  }
+
+  .playlist-title {
+    font-size: 12px;
+    padding: 0;
+    line-height: 16px;
+  }
+
+  .ant-page-header-heading-title .ant-tag-blue {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+/* Playlist Id page End */
