@@ -1,0 +1,273 @@
+{
+  "navbar": {
+    "premium": "Premium",
+    "support": "Destek",
+    "download": "İndir",
+    "signup": "Kaydol",
+    "login": "Oturum aç"
+  },
+
+  "trial": {
+    "h1": "Premium'u 1 ay boyunca ücretsiz kullan",
+    "price": "Sonra sadece 17,99 TL/ay. İstediğin zaman iptal et.",
+    "get_started": "KULLANMAYA BAŞLA",
+    "view_plans": "PLANLARI GÖRÜNTÜLE",
+    "footer_link": "Hüküm ve koşullar geçerlidir.",
+    "footer_text": "Premium'u daha önce denemiş olan kullanıcılar 1 aylık ücretsiz tekliften yararlanamaz."
+  },
+
+  "benefits": {
+    "h2": "Neden Premium'a geçmelisin?",
+    "footer1": {
+      "title": "Müzik indir.",
+      "description": "İstediğin yerde dinle."
+    },
+    "footer2": {
+      "title": "Reklamlarla bölünmeden dinle.",
+      "description": "Kesintisiz müziğin keyfini çıkar."
+    },
+    "footer3": {
+      "title": "İstediğin şarkıyı çal.",
+      "description": "Mobil cihazında bile."
+    },
+    "footer4": {
+      "title": "Sınırsız şarkı atlama hakkı.",
+      "description": "Sonraki düğmesine basman yeterli."
+    }
+  },
+
+  "premium_plans": {
+    "h2": "Premium'unu seç",
+    "h3": "Telefonunda, hoparlöründe ve diğer cihazlarında sınırsız dinle.",
+    "trial_period": "1 ay ücretsiz",
+    "plans": [
+      {
+        "index": 0,
+        "plan_name": "Bireysel",
+        "price": "Teklif döneminden sonra ayda 17,99 TL",
+        "account_num": "1 hesap",
+        "features": [
+          "Müziklerini reklamsız dinle",
+          "Her yerde çal, hatta çevrimdışı dinle",
+          "İstediğin zaman çal"
+        ],
+        "footer_link": "Hüküm ve koşullar geçerlidir.",
+        "footer_text": "Premium'u daha önce denemiş olan kullanıcılar 1 aylık ücretsiz tekliften yararlanamaz.",
+        "one_time_payment": "Bir defalık ödeme yapılabilir",
+        "other_payment": "DİĞER ÖDEME SEÇENEKLERİ"
+      },
+      {
+        "index": 1,
+        "plan_name": "Duo",
+        "price": "Teklif döneminden sonra ayda 23,99 TL",
+        "account_num": "2 hesap",
+        "features": [
+          "Aynı çatı altında yaşayan çiftler için 2 Premium hesabı",
+          "Duo Mix: İki kişi için bir çalma listesi, ikinizin tadını çıkaracağı müziklerle düzenli olarak güncellenir",
+          "Kesintisiz müzik dinle, çevrimdışı çal, istediğin zaman çal"
+        ],
+        "footer_link": "Hüküm ve koşullar geçerlidir.",
+        "footer_text": "Premium'u daha önce denemiş olan kullanıcılar 1 aylık ücretsiz tekliften yararlanamaz.",
+        "other_payment": "DİĞER ÖDEME SEÇENEKLERİ"
+      },
+      {
+        "index": 2,
+        "plan_name": "Aile",
+        "price": "Teklif döneminden sonra ayda 29,99 TL",
+        "account_num": "6 hesap",
+        "features": [
+          "Aynı çatı altında yaşayan aile üyeleri için 6 ayrı Premium hesabı",
+          "Aile Mix'i: Ailen için bir çalma listesi, hepinizin tadını çıkaracağı müziklerle düzenli olarak güncellenir",
+          "Sansürsüz müziği engelle",
+          "Kesintisiz müzik dinle, çevrimdışı çal, istediğin zaman çal"
+        ],
+        "footer_link": "Hüküm ve koşullar geçerlidir.",
+        "footer_text": "Premium'u daha önce denemiş olan kullanıcılar 1 aylık ücretsiz tekliften yararlanamaz."
+      },
+      {
+        "index": 3,
+        "plan_name": "Öğrenci",
+        "price": "Teklif döneminden sonra ayda 8,99 TL",
+        "account_num": "1 hesap",
+        "features": [
+          "Yararlanabilecek üniversite öğrencilerine özel indirim",
+          "Müziklerini reklamsız dinle",
+          "Her yerde çal, hatta çevrimdışı dinle",
+          "İstediğin zaman çal"
+        ],
+        "footer_link": "Hüküm ve koşullar geçerlidir.",
+        "footer_text": "Teklif, yalnızca akredite olan yüksek öğrenim kurumlarındaki öğrenciler için geçerlidir. Premium'u daha önce denemiş olan kullanıcılar 1 aylık ücretsiz tekliften yararlanamaz. Spotify Öğrenci İndirimi Teklifi"
+      }
+    ],
+
+    "button": "1 AY ÜCRETSİZ KULLAN"
+  },
+  "footer": {
+    "company": {
+      "title": "Şirket",
+      "contents": [
+        {
+          "title": "Hakkında",
+          "link": "https://www.spotify.com/us/about-us/contact/"
+        },
+        {
+          "title": "Kariyer",
+          "link": "https://www.spotifyjobs.com/?_gl=1*uhdldr*_gcl_aw*R0NMLjE2MzQ0OTM1NzcuQ2p3S0NBandrNi1MQmhCWkVpd0FPVVVEcDk4by1GdTdZX21sSEdzQUw1bV82aXIxakxqbnRUWUpIWkRubUVaU0NGVWtfTFpOTFpZNXRCb0NrY3NRQXZEX0J3RQ..*_gcl_dc*R0NMLjE2MzQ0OTM1NzcuQ2p3S0NBandrNi1MQmhCWkVpd0FPVVVEcDk4by1GdTdZX21sSEdzQUw1bV82aXIxakxqbnRUWUpIWkRubUVaU0NGVWtfTFpOTFpZNXRCb0NrY3NRQXZEX0J3RQ..&_ga=2.132901582.130364452.1634483351-952622678.1633939382&_gac=1.263390718.1634493580.CjwKCAjwk6-LBhBZEiwAOUUDp98o-Fu7Y_mlHGsAL5m_6ir1jLjntTYJHZDnmEZSCFUk_LZNLZY5tBoCkcsQAvD_BwE"
+        },
+        {
+          "title": "For the Record",
+          "link": "https://newsroom.spotify.com/?_gl=1*15pf7dw*_gcl_aw*R0NMLjE2MzQ1MDM3OTYuQ2p3S0NBandrNi1MQmhCWkVpd0FPVVVEcDk4by1GdTdZX21sSEdzQUw1bV82aXIxakxqbnRUWUpIWkRubUVaU0NGVWtfTFpOTFpZNXRCb0NrY3NRQXZEX0J3RQ..*_gcl_dc*R0NMLjE2MzQ1MDM3OTYuQ2p3S0NBandrNi1MQmhCWkVpd0FPVVVEcDk4by1GdTdZX21sSEdzQUw1bV82aXIxakxqbnRUWUpIWkRubUVaU0NGVWtfTFpOTFpZNXRCb0NrY3NRQXZEX0J3RQ.."
+        }
+      ]
+    },
+    "communities": {
+      "title": "Topluluklar",
+      "contents": [
+        {
+          "title": "Sanatçılar İçin",
+          "link": "https://artists.spotify.com/?_gl=1*1jzf5ov*_gcl_aw*R0NMLjE2MzQ1MDM3OTYuQ2p3S0NBandrNi1MQmhCWkVpd0FPVVVEcDk4by1GdTdZX21sSEdzQUw1bV82aXIxakxqbnRUWUpIWkRubUVaU0NGVWtfTFpOTFpZNXRCb0NrY3NRQXZEX0J3RQ..*_gcl_dc*R0NMLjE2MzQ1MDM3OTYuQ2p3S0NBandrNi1MQmhCWkVpd0FPVVVEcDk4by1GdTdZX21sSEdzQUw1bV82aXIxakxqbnRUWUpIWkRubUVaU0NGVWtfTFpOTFpZNXRCb0NrY3NRQXZEX0J3RQ..&_ga=2.233563870.130364452.1634483351-952622678.1633939382&_gac=1.190449369.1634503798.CjwKCAjwk6-LBhBZEiwAOUUDp98o-Fu7Y_mlHGsAL5m_6ir1jLjntTYJHZDnmEZSCFUk_LZNLZY5tBoCkcsQAvD_BwE"
+        },
+        {
+          "title": "Geliştiriciler",
+          "link": "https://developer.spotify.com/?_gl=1*1nkhrg0*_gcl_aw*R0NMLjE2MzQ1MDM3OTYuQ2p3S0NBandrNi1MQmhCWkVpd0FPVVVEcDk4by1GdTdZX21sSEdzQUw1bV82aXIxakxqbnRUWUpIWkRubUVaU0NGVWtfTFpOTFpZNXRCb0NrY3NRQXZEX0J3RQ..*_gcl_dc*R0NMLjE2MzQ1MDM3OTYuQ2p3S0NBandrNi1MQmhCWkVpd0FPVVVEcDk4by1GdTdZX21sSEdzQUw1bV82aXIxakxqbnRUWUpIWkRubUVaU0NGVWtfTFpOTFpZNXRCb0NrY3NRQXZEX0J3RQ..&_ga=2.157363066.130364452.1634483351-952622678.1633939382&_gac=1.260253183.1634503798.CjwKCAjwk6-LBhBZEiwAOUUDp98o-Fu7Y_mlHGsAL5m_6ir1jLjntTYJHZDnmEZSCFUk_LZNLZY5tBoCkcsQAvD_BwE"
+        },
+        {
+          "title": "Reklam",
+          "link": "https://ads.spotify.com/?_gl=1*1nkhrg0*_gcl_aw*R0NMLjE2MzQ1MDM3OTYuQ2p3S0NBandrNi1MQmhCWkVpd0FPVVVEcDk4by1GdTdZX21sSEdzQUw1bV82aXIxakxqbnRUWUpIWkRubUVaU0NGVWtfTFpOTFpZNXRCb0NrY3NRQXZEX0J3RQ..*_gcl_dc*R0NMLjE2MzQ1MDM3OTYuQ2p3S0NBandrNi1MQmhCWkVpd0FPVVVEcDk4by1GdTdZX21sSEdzQUw1bV82aXIxakxqbnRUWUpIWkRubUVaU0NGVWtfTFpOTFpZNXRCb0NrY3NRQXZEX0J3RQ..&_ga=2.157363066.130364452.1634483351-952622678.1633939382&_gac=1.260253183.1634503798.CjwKCAjwk6-LBhBZEiwAOUUDp98o-Fu7Y_mlHGsAL5m_6ir1jLjntTYJHZDnmEZSCFUk_LZNLZY5tBoCkcsQAvD_BwE"
+        },
+        {
+          "title": "Yatırımcılar",
+          "link": "https://investors.spotify.com/?_gl=1*1nkhrg0*_gcl_aw*R0NMLjE2MzQ1MDM3OTYuQ2p3S0NBandrNi1MQmhCWkVpd0FPVVVEcDk4by1GdTdZX21sSEdzQUw1bV82aXIxakxqbnRUWUpIWkRubUVaU0NGVWtfTFpOTFpZNXRCb0NrY3NRQXZEX0J3RQ..*_gcl_dc*R0NMLjE2MzQ1MDM3OTYuQ2p3S0NBandrNi1MQmhCWkVpd0FPVVVEcDk4by1GdTdZX21sSEdzQUw1bV82aXIxakxqbnRUWUpIWkRubUVaU0NGVWtfTFpOTFpZNXRCb0NrY3NRQXZEX0J3RQ..&_ga=2.157363066.130364452.1634483351-952622678.1633939382&_gac=1.260253183.1634503798.CjwKCAjwk6-LBhBZEiwAOUUDp98o-Fu7Y_mlHGsAL5m_6ir1jLjntTYJHZDnmEZSCFUk_LZNLZY5tBoCkcsQAvD_BwE"
+        },
+        { "title": "Satıcılar", "link": "https://spotifyforvendors.com/" }
+      ]
+    },
+    "useful_links": {
+      "title": "YARARLI BAĞLANTILAR",
+      "contents": [
+        {
+          "title": "Destek",
+          "link": "https://support.spotify.com/?_gl=1*1nkhrg0*_gcl_aw*R0NMLjE2MzQ1MDM3OTYuQ2p3S0NBandrNi1MQmhCWkVpd0FPVVVEcDk4by1GdTdZX21sSEdzQUw1bV82aXIxakxqbnRUWUpIWkRubUVaU0NGVWtfTFpOTFpZNXRCb0NrY3NRQXZEX0J3RQ..*_gcl_dc*R0NMLjE2MzQ1MDM3OTYuQ2p3S0NBandrNi1MQmhCWkVpd0FPVVVEcDk4by1GdTdZX21sSEdzQUw1bV82aXIxakxqbnRUWUpIWkRubUVaU0NGVWtfTFpOTFpZNXRCb0NrY3NRQXZEX0J3RQ..&_ga=2.157363066.130364452.1634483351-952622678.1633939382&_gac=1.260253183.1634503798.CjwKCAjwk6-LBhBZEiwAOUUDp98o-Fu7Y_mlHGsAL5m_6ir1jLjntTYJHZDnmEZSCFUk_LZNLZY5tBoCkcsQAvD_BwE"
+        },
+        {
+          "title": "Web Çalar",
+          "link": "https://www.spotify.com/us/premium/?utm_source=tr-en_brand_contextual-desktop_text&utm_medium=paidsearch&utm_campaign=alwayson_emea_tr_premiumbusiness_core_brand+contextual-desktop+text+exact+tr-en+google&gclid=CjwKCAjwk6-LBhBZEiwAOUUDp98o-Fu7Y_mlHGsAL5m_6ir1jLjntTYJHZDnmEZSCFUk_LZNLZY5tBoCkcsQAvD_BwE&gclsrc=aw.ds#:~:text=Support-,Web%20Player,-Free%20Mobile%20App"
+        },
+        {
+          "title": "Ücretsiz Mobil Uygulama",
+          "link": "https://www.spotify.com/tr/free/"
+        }
+      ]
+    },
+    "footer_bottom": [
+      { "title": "Yasal", "link": "https://www.spotify.com/us/legal/" },
+      {
+        "title": "Gizlilik Merkezi",
+        "link": "https://www.spotify.com/us/privacy/"
+      },
+      {
+        "title": "Gizlilik Politikası",
+        "link": "https://www.spotify.com/us/legal/privacy-policy/"
+      },
+      {
+        "title": "Tanımlama Bilgileri",
+        "link": "https://www.spotify.com/us/legal/cookies-policy/"
+      },
+      {
+        "title": "Reklamlar Hakkında",
+        "link": "https://www.spotify.com/us/legal/privacy-policy/#s3"
+      },
+      { "title": null }
+    ],
+    "country": "Türkiye"
+  },
+  "signup": {
+    "heading": "Dinlemeye başlamak için ücretsiz kaydol.",
+    "facebook": "Facebook ile kaydol",
+    "or": "veya",
+    "subheading": "E-posta adresinle kaydol",
+    "email_label": "E-posta adresin nedir?",
+    "email_placeholder": "E-posta adresini gir.",
+    "email_error": "E-posta adresini girmen gerekiyor.",
+    "confirm_email_label": "E-posta adresini onayla",
+    "confirm_email_placeholder": "E-posta adresini yeniden gir.",
+    "confirm_email_error": "E-posta adresini onaylaman gerekiyor.",
+    "password_label": "Parola oluştur",
+    "pasword_placeholder": "Parola oluştur.",
+    "password_error": "Bir parola girmen gerekiyor.",
+    "username_label": "Sana hangi isimle hitap etmeliyiz?",
+    "username_placeholder": "Profil adı gir",
+    "username_error": "Profilin için bir ad gir.",
+    "gender_label": "Cinsiyetin nedir?",
+    "genders": ["Erkek", "Kadın", "Diğer"],
+    "checkbox": "Spotify'ın gönderdiği pazarlama mesajlarını almak istemiyorum",
+    "sign_up_btn": "Sign Up",
+    "login_direct": "Have an account?",
+    "login": "Log in"
+  },
+  "login": {
+    "facebook": "FACEBOOK İLE DEVAM ET",
+    "apple": "APPLE İLE DEVAM ET",
+    "google": "GOOGLE İLE DEVAM ET",
+    "or": "VEYA",
+    "email_label": "E-posta adresi veya kullanıcı adı",
+    "email_placeholder": "E-posta adresi veya kullanıcı adı",
+    "email_error": "Lütfen Spotify kullanıcı adını veya eposta adresini gir.",
+    "password_label": "Parola",
+    "password_placeholder": "Parola",
+    "password_error": "Lütfen parolanı gir.",
+    "forget": "Parolanı mı unuttun?",
+    "remember": "Beni hatırla",
+    "login-btn": "OTURUM AÇ",
+    "no_account": "Hesabın yok mu?",
+    "sign_up_btn": "SPOTİFY İÇİN KAYDOL"
+  },
+  "vertical_navbar": {
+    "homepage": "Ana sayfa",
+    "search": "Ara",
+    "library": "Kitaplığın",
+    "playlist": "Çalma Listesi Oluştur",
+    "favorite_songs": "Beğenilen Şarkılar",
+    "episodes": "Bölümlerin",
+    "download": "Uygulamayı Yükle"
+  },
+  "banner": {
+    "logout": "Oturumu Kapat",
+    "input": {
+      "placeholder": "Sanatçılar, şarkılar ve podcast'ler"
+    }
+  },
+  "playlist_detail_page": {
+    "playlist_cover": {
+      "playlist": "ÇALMA LİSTESİ",
+      "likes": "beğenme",
+      "songs": "şarkı"
+    },
+    "playlist_songs_container": {
+      "title": "BAŞLIK",
+      "album": "ALBÜM",
+      "added_at": "TARİH EKLENDİ"
+    }
+  },
+  "vertical_card": {
+    "artist": "Sanatçı"
+  },
+  "collections": {
+    "playlists": "Çalma Listeleri",
+    "podcasts": "Podcast'ler",
+    "artists": "Sanatçılar",
+    "albums": "Albümler"
+  },
+  "homepage": {
+    "hello": "Merhaba",
+    "favorite_songs": "Beğenilen Şarkılar",
+    "new_releases": "Yakında Çıkanlar",
+    "top_artists": "Gözde Sanatçıların",
+    "see_all": "HEPSİNİ GÖR"
+  },
+  "searchpage": {
+    "browse_all": "Hepsine Göz At",
+    "see_all": "HEPSİNİ GÖR"
+  },
+  "loading": "Yükleniyor..."
+}

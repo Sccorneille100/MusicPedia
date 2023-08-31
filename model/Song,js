@@ -1,0 +1,32 @@
+const { Schema, model } = require('mongoose');
+
+const songSchema = new Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+      trim: true
+    },
+    Length: {
+      type: Number
+    },
+    otherArtist: {
+      type: String,
+      required: true
+    },
+    popular: {
+      type: Boolean,
+      required: true
+    },
+    album: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'Album'
+      }
+    ]
+  }
+);
+
+const Song = model('Song', songSchema);
+
+module.exports = Song;

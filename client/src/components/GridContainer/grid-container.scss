@@ -1,0 +1,18 @@
+@import '../../styles/variables';
+
+.grid-container {
+  display: grid;
+  padding: 0 32px;
+  background-color: transparent;
+  color: $white;
+  min-height: calc((100vh - $web-player-height) - $top-banner-height);
+  height: auto;
+  overflow: scroll;
+  margin-top: 70px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .grid-container {
+    padding: 0 32px;
+  }
+}
