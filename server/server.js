@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const axios = require('axios');
 const bodyParser = require('body-parser');
+const db = require('./config/connection');
 const config = require('./config/config'); // Import your Last.fm API key
 const bcrypt = require('bcrypt');
 const cors = require('cors');
@@ -9,13 +10,23 @@ const { errorHandler } = require('./middleware/errorMiddleware');
 const jwt = require('jsonwebtoken')
 const secretKey = (process.env.JWT_SECRET);
 const routes = require('./routes');
+const { ApolloServer } = require('apollo-server-express');
+const { typeDefs, resolvers } = require('./schemas');
+const { authMiddleware } = require('./utils/auth');
+
 
 
 // Import Route Handlers
 const { artistRoutes, searchRoutes } = require('./controllers');
 
 const app = express();
-const port = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001;
+
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  context: authMiddleware,
+});
 
 
 app.use(cors());
@@ -132,6 +143,18 @@ const users = [];
      }
  })
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
-});
+// Create a new instance of an Apollo server with the GraphQL schema
+const startApolloServer = async () => {
+  await server.start();
+  server.applyMiddleware({ app });
+  
+  db.once('open', () => {
+    app.listen(PORT, () => {
+      console.log(`API server running on port ${PORT}!`);
+      console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+    })
+  })
+  };
+  
+// Call the async function to start the server
+startApolloServer();
