@@ -1,0 +1,69 @@
+/* Styling for the login form container */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  /* Styling for the form labels */
+  .form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Styling for the form inputs */
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Styling for invalid inputs */
+  .form-input:invalid {
+    border-color: #dc3545;
+  }
+  
+  /* Styling for invalid input feedback */
+  .form-input:invalid + .invalid-feedback {
+    display: block;
+  }
+  
+  /* Styling for the submit button */
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Styling for the submit button when disabled */
+  .submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Styling for the error alert */
+  .error-alert {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #dc3545;
+    border-radius: 5px;
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* Styling for the dismiss button in the alert */
+  .alert-dismiss {
+    cursor: pointer;
+  }
+  
