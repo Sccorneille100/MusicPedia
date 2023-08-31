@@ -15,7 +15,7 @@ import {
 } from '@apollo/client';
 
 const GRAPHQL_SERVER =
-  process.env.NEXT_PUBLIC_GRAPHQL_SERVER || 'http://localhost:4000/graphql';
+  process.env.NEXT_PUBLIC_GRAPHQL_SERVER || 'https://spotify-graphql-server.fly.dev/graphql';
 
 const client = new ApolloClient({
   link: new HttpLink({ uri: GRAPHQL_SERVER, fetch }),

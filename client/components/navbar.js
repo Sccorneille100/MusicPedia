@@ -77,7 +77,7 @@ export default function Navbar({ setSearchText, setSearchOption }) {
                   <Link href="/categories" title='categogies'>
                     <span itemProp="name">sign up</span>
                   </Link>
-                  <Link href="../stripe" title='donate'>
+                  <Link href="https://buy.stripe.com/test_9AQ033eKU2kqb1m144" title='donate'>
                     <span itemProp="donate">donate</span>
                   </Link>
  
