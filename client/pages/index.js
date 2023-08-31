@@ -6,14 +6,14 @@ import { useState } from 'react';
 
 export default function App({ searchOption, searchText }) {
   const [response, setResponse] = useState([]);
-  const { loading, error } = useQuery(query[queryTypes[searchOption]], {
+  const { loading, error, data } = useQuery(query[queryTypes[searchOption]], {
     variables: { query: searchText },
     skip: !searchText,
-    onCompleted: (loading) => {
-      if (loading && searchOption == 'specific') {
-        setResponse([loading.queryIndividualPlaylist]);
+    onCompleted: (data) => {
+      if (data && searchOption == 'specific') {
+        setResponse([data.queryIndividualPlaylist]);
       } else {
-        setResponse(loading.queryPlaylists);
+        setResponse(data.queryPlaylists);
       }
     },
   });
