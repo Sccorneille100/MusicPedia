@@ -17,7 +17,6 @@ const { artistRoutes, searchRoutes } = require('./controllers');
 const app = express();
 const port = process.env.PORT || 3001;
 
-app.use(express.static(path.join(__dirname, 'client/build')))
 
 app.use(cors());
 
@@ -28,11 +27,10 @@ app.use(bodyParser.json());
 
 app.use('/api/users', require('./routes/api/userRoutes.js'))
 
-// Define a route handler for the root URL
-app.get('/', (req, res) => {
-    // You can send a response here, such as rendering an HTML page.
-    res.send('<h1>Welcome to the Artist Search App</h1>');
-});
+app.use(express.static(path.join(__dirname, '../client/build')))
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build'))
+})
 
 
 // Last.fm API key
@@ -85,9 +83,7 @@ app.use('/search-results', searchRoutes);
 // app.use('/songs', songRoutes);
 
 
-app.get('/register', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/src/pages', 'Register.jsx'));
-});
+
 
 
 app.post('/users', async (req, res) => {
