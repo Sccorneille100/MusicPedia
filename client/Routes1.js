@@ -2,6 +2,8 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Homepage from './pages/_app'
 import App from './pages'
+import main from './pages'
+import MyApp from './pages/playlists/main'
 
 const Routes1 = () => {
   return (
@@ -11,10 +13,10 @@ const Routes1 = () => {
           path='</donate>'
           element={<donate/>}
         />
-        <Route path= '/' element ={<Homepage/>} />
+        <Route path= '/' element ={<MyApp/>} />
   /      <Route
-          path= '/login'
-          element={<App/>}
+          path= '/'
+          element={<main/>}
         />
       </routes>
     </BrowserRouter>
